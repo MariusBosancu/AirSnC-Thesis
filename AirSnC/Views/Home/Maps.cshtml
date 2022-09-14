@@ -1,0 +1,134 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Driver View";
+}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Welcome back !">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Page 1</title>
+    <link rel="stylesheet" href="~/HomePage/nicepage.css" media="screen">
+    <link rel="stylesheet" href="~/HomePage/Log.css" media="screen">
+    <script class="u-script" type="text/javascript" src="~/HomePage/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="~/HomePage/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.2.6, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+
+
+
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Page 1">
+    <meta property="og:type" content="website">
+</head>
+<style>
+    
+    #map {
+        height: 800px;
+        width: 1200px;
+        
+    }
+
+    #capture {
+        height: 360px;
+        width: 480px;
+        overflow: hidden;
+        float: left;
+        background-color: #ECECFB;
+        border: thin solid #333;
+        border-left: none;
+    }
+</style>
+<body class="u-palette-2-light-1">
+    <div class="container " id="map"></div>
+
+<div class="container-md" id="capture"></div>
+</body>
+<script type="text/javascript">
+    var map;
+    var src = 'https://developers.google.com/maps/documentation/javascript/examples/kml/westcampus.kml';
+    /* function initMap(){
+        map = new google.maps.Map(document.getElementById('map'),
+        {
+                center: { lat: 46.77503461065913, lng: 23.594661634644023 },   
+                zoom: 14
+        });
+    }*/
+    function initMap() {
+        // The location of Uluru
+        const Twelve = { lat: 46.77503461065913, lng: 23.594661634644023 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 14,
+            center: Twelve,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+            position: Twelve,
+            map: map,
+        });
+    }
+    /*var kmlLayer = new google.maps.KmlLayer(src, {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+    });
+    kmlLayer.addListener('click', function (event) {
+        var content = event.featureData.infoWindowHtml;
+        var testimonial = document.getElementById('capture');
+        testimonial.innerHTML = content;
+    });*/
+
+    /*infoWindow = new google.maps.InfoWindow();
+
+    const locationButton = document.createElement("button");
+
+    locationButton.textContent = "Pan to Current Location";
+    locationButton.classList.add("custom-map-control-button");
+    map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+    locationButton.addEventListener("click", () => {
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude,
+                    };
+
+                    infoWindow.setPosition(pos);
+                    
+                    infoWindow.setContent("Location found.");
+                    infoWindow.open(map);
+                    map.setCenter(pos);
+                },
+                () => {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                }
+            );
+        } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+        }
+    });
+    }
+
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(
+            browserHasGeolocation
+                ? "Error: The Geolocation service failed."
+                : "Error: Your browser doesn't support geolocation."
+        );
+        infoWindow.open(map);
+    }
+    */
+
+    window.initMap = initMap;
+    
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKr81cOjaUe2eCEVLu2MY76jQt_bukhQ0&callback=initMap"
+       async defer> </script>

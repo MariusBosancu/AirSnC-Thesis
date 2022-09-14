@@ -1,0 +1,189 @@
+﻿@model AirSnC.Models.Products
+@addTagHelper *, LazZiya.TagHelpers
+@{
+    ViewData["Title"] = "Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Welcome back !">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Page 1</title>
+    <link rel="stylesheet" href="~/HomePage/nicepage.css" media="screen">
+    <link rel="stylesheet" href="~/HomePage/Log.css" media="screen">
+    <script class="u-script" type="text/javascript" src="~/HomePage/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="~/HomePage/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.2.6, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+
+
+
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Page 1">
+    <meta property="og:type" content="website">
+
+    </head>
+    <body class="u-palette-2-light-2">
+       <style>
+        .u-section-1 .u-sheet-1 {
+        min-height: 350px;
+        }
+       </style> 
+    <section class="u-align-center u-clearfix u-section-1 u-palette-2-light-2" id="sec-1fb7">
+        <div class="u-clearfix u-sheet u-sheet-1 u-palette-2-light-2">
+            <div class="u-palette-2-light-2 u-carousel u-expanded-width-xs u-gallery u-layout-thumbnails u-lightbox u-no-transition u-show-text-always u-gallery-1" id="carousel-e131" data-interval="5000" data-u-ride="carousel">
+                @*<div class="u-carousel-inner u-gallery-inner u-palette-2-light-2" role="listbox">
+                    <div class="u-active u-carousel-item u-gallery-item u-carousel-item-1 u-palette-2-light-2">
+
+                        <div class="u-back-slide" data-image-width="1080" data-image-height="1080">
+                            <img class="u-back-image u-expanded" src="~/HomePage/images/Cakes/@Model.Picture1">
+                        </div>
+                        <div class="u-over-slide u-over-slide-1">
+                            <h3 class="u-gallery-heading">Sample Title</h3>
+                            <p class="u-gallery-text">Sample Text</p>
+                        </div>
+                    </div>
+                    <div class="u-carousel-item u-gallery-item u-carousel-item-2">
+                        <div class="u-back-slide" data-image-width="1500" data-image-height="1000">
+                            <img class="u-back-image u-expanded" src="~/HomePage/images/Cakes/@Model.Picture2">
+                        </div>
+                        <div class="u-over-slide u-over-slide-2">
+                            <h3 class="u-gallery-heading">Sample Title</h3>
+                            <p class="u-gallery-text">Sample Text</p>
+                        </div>
+                    </div>
+                    <div class="u-carousel-item u-gallery-item u-carousel-item-3" data-image-width="2836" data-image-height="1875">
+                        <div class="u-back-slide">
+                            <img class="u-back-image u-expanded" src="~/HomePage/images/Cakes/@Model.Picture3">
+                        </div>
+                        <div class="u-over-slide u-over-slide-3">
+                            <h3 class="u-gallery-heading">Sample Title</h3>
+                            <p class="u-gallery-text">Sample Text</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-1" href="#carousel-e131" role="button" data-u-slide="prev">
+                    <span aria-hidden="true">
+                        <svg viewBox="0 0 451.847 451.847">
+                            <path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+    c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+    c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path>
+                        </svg>
+                    </span>
+                    <span class="sr-only">
+                        <svg viewBox="0 0 451.847 451.847">
+                            <path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+    c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+    c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-2" href="#carousel-e131" role="button" data-u-slide="next">
+                    <span aria-hidden="true">
+                        <svg viewBox="0 0 451.846 451.847">
+                            <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+    L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+    c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path>
+                        </svg>
+                    </span>
+                    <span class="sr-only">
+                        <svg viewBox="0 0 451.846 451.847">
+                            <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+    L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+    c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path>
+                        </svg>
+                    </span>
+                </a>*@
+                <ol class="u-carousel-thumbnails u-spacing-10 u-carousel-thumbnails-1">
+                    <li class="u-active u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-e131" data-u-slide-to="0">
+                        <img class="u-carousel-thumbnail-image u-image" src="~/HomePage/images/Cakes/@Model.Picture1">
+                    </li>
+                    <li class="u-carousel-thumbnail u-carousel-thumbnail-2" data-u-target="#carousel-e131" data-u-slide-to="1">
+                        <img class="u-carousel-thumbnail-image u-image" src="~/HomePage/images/Cakes/@Model.Picture2">
+                    </li>
+                    <li class="u-carousel-thumbnail u-carousel-thumbnail-3" data-u-target="#carousel-e131" data-u-slide-to="2">
+                        <img class="u-carousel-thumbnail-image u-image" src="~/HomePage/images/Cakes/@Model.Picture3">
+                    </li>
+                </ol>
+            </div>
+        </div>
+        
+    </section>
+    
+    @*
+    alo
+    *@
+    <section class="u-align-center u-clearfix u-section-2 u-palette-2-light-2" id="sec-23ed">
+        <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1 u-palette-2-light-2">
+            <div class="u-expanded-width u-tabs u-tabs-1 u-palette-2-light-2">
+                <ul class="u-border-1 u-border-grey-25 u-tab-list u-unstyled" role="tablist">
+                    <li class="u-tab-item" role="presentation">
+                        <a class="active u-active-white u-border-2 u-border-active-grey-15 u-border-hover-grey-15 u-border-no-bottom u-button-style u-tab-link u-text-active-palette-2-base u-text-hover-black u-tab-link-1" id="link-tab-14b7" href="#tab-14b7" role="tab" aria-controls="tab-14b7" aria-selected="true">Specifications</a>
+                    </li>
+                    <li class="u-tab-item" role="presentation">
+                        <a class="u-active-white u-border-2 u-border-active-grey-15 u-border-hover-grey-15 u-border-no-bottom u-button-style u-tab-link u-text-active-palette-2-base u-text-hover-black u-tab-link-2" id="link-tab-2917" href="#tab-2917" role="tab" aria-controls="tab-2917" aria-selected="false">Reviews</a>
+                    </li>
+                </ul>
+
+                <div class="u-tab-content u-palette-2-light-2">
+                    <div class="u-palette-2-light-2 u-align-left u-container-style u-tab-active u-tab-pane u-white u-tab-pane-1" id="tab-14b7" role="tabpanel" aria-labelledby="link-tab-14b7">
+                        <div class="u-container-layout u-container-layout-1 u-palette-2-light-2">
+
+
+                            <p class="u-text u-text-1">Description: @Html.DisplayFor(modelitem => Model.Description) &nbsp;</p>
+                            
+                            <p class="u-text u-text-1">Price: @Html.DisplayFor(modelitem => Model.Price) $ &nbsp;</p>
+
+                        </div>
+                    </div>
+                    <a href="@Url.Action("alertss","Home",new { id = Model.Name })">Order</a>
+                    @if (ViewBag.Message != null)
+                    {
+                        <script type="text/javascript">
+                            window.onload = function () {
+                                alert("@ViewBag.Message");
+                            };
+                        </script>
+                    }
+                    @*AICI*@
+
+                @*<div class="u-container-style u-tab-pane u-white u-tab-pane-2" id="tab-2917" role="tabpanel" aria-labelledby="link-tab-2917">
+                     @if (product.Reviews != null)
+                      {
+                          foreach (var alo in (List<Car>)ViewData["pl"])
+                            {
+                            <h4 class="u-text u-text-default u-text-2">Review :</h4>
+                            <div class="u-container-layout u-valign-top u-container-layout-2">
+                             <p class="u-text u-text-1">@Html.DisplayFor(modelitem => @product.Reviews) &nbsp;</p>
+                            </div>
+                            <br />
+                          }
+                      }
+                      else
+                      {
+                          <div class="u-container-layout u-valign-top u-container-layout-2">
+                          <h4 class="u-text u-text-default u-text-2">Be The First To Review This Product!</h4>
+                          </div>
+                      }
+                    <br />
+                      <p>Write your review into the textbox below.</p>
+                      <form action="~/Home/Addrev" method="post">
+                      <input type="text" name="Reviews" placeholder="aloha" />
+                      <input type="hidden" name="ID" value="@product.ID" />
+                      <input type="submit" value="Save" />
+                      </form>
+                      <br />
+                                       
+
+                 </div>*@
+                 
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+}

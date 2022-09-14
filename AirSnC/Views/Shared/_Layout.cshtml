@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en" style="font-size: 16px;">
+<head>
+    <meta charset="utf-8" />
+    @*<meta name="viewport" content="width=device-width, initial-scale=1.0" />*@
+
+    <meta name="theme-color" content="#478ac9">
+
+    <title>AirSnC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AirSnC.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/HomePage/nicepage.css" media="screen">
+    <link rel="stylesheet" href="~/HomePage/Home.css" media="screen">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <script class="u-script" type="text/javascript" src="~/HomePage/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="~/HomePage/nicepage.js" defer=""></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</head>
+@{
+    //ViewBag.name = ViewBag.name;
+}
+<body class="u-body">
+    <header class="u-clearfix u-header u-palette-2-light-1 u-header" id="sec-8d5c">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <a href="~/Home/ProductView" class="u-image u-logo u-image-1" data-image-width="943" data-image-height="763">
+                <img src="~/HomePage/images/Logo.png" class="u-logo-image u-logo-image-1">
+            </a>
+            
+            <form action="@Url.Action("ProductView","Home")" method="get" class="u-border-1 u-border-grey-30 u-search u-search-left u-white u-search-1">
+                <button class="u-search-button" type="submit">
+                    <span class="u-file-icon u-search-icon u-spacing-10 u-search-icon-1">
+                        <img src="~/HomePage/images/158861.png" alt="">
+                    </span>
+                </button>
+                <input class="u-search-input" type="search" name="search" id="search" value="" placeholder="Search">
+            </form>
+            
+            
+            @if(ViewBag.name != null)
+            {
+                <a class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-palette-1-base u-btn-1" href="~/Home/LogOut">@ViewBag.name</a>
+            }
+            else
+            {
+                <a class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-palette-1-base u-btn-1" href="~/Home/LogIn">Log In</a>
+            }
+            
+        </div>
+    </header>
+    @*<form>
+        <a href="@Url.Action("CartView", "ShoppingCart")" style="border-color:transparent;border-radius:30px;padding-top:5px;">
+
+            <span class="glyphicon glyphicon-shopping-cart">
+            </span>
+
+            <p id="count" value="" class="badge">
+                @ViewBag.Count
+            </p>
+
+
+        </a>
+
+    </form>*@
+    <div class="container-fluid">
+        <main role="main" >
+            @RenderBody()
+            
+        </main>
+        
+    </div>
+    @await RenderSectionAsync("Scripts", required: false)
+    
+</body>
+
+</html>

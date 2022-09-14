@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "AdminView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <form id="form1" runat="server">
+        <header class="header">
+            <nav class="navbar navbar-expand-lg px-4 py-4 bg-white shadow">
+
+            </nav>
+        </header>
+
+        <div class="page-holder w-100 d-flex flex-wrap">
+            <div class="container-fluid px-x1-5">
+                <section class="py-5">
+                    <div class="row">
+
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="h6 text-uppercase mb-0">Manage Products</h3>
+                                </div>
+                                <div class="card-body">
+                                    <a href="@Url.Action("Index","Products")" type="button" class="btn btn-primary">Login</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="h6 text-uppercase mb-0">Manage Accounts</h3>
+                                </div>
+                                <div class="card-body">
+                                    <a href="@Url.Action("Index","SignIns")" type="button" class="btn btn-primary">Sign up</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                
+
+            </div>
+
+        </div>
+    </form>
+</body>

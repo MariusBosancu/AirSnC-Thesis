@@ -1,0 +1,109 @@
+﻿@model PagedResult<Products>
+@addTagHelper *, LazZiya.TagHelpers
+@{
+    ViewData["Title"] = "ProductsView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@*<table class="table">
+    <tbody>
+@foreach (var item in Model.Results) {
+    
+    <div class="container">
+        <div class="row" style="padding-top: 50px">
+            <asp:Repeater ID="rptrProducts" runat="server">
+                <ItemTemplate>
+                    <div class="col-sm-3 col-md-3">
+                        
+                        <button id="button">
+                            @Html.HiddenFor(modelItem => item.Name)
+                            
+                            <div class="img-thumbnail">
+                             <img src="~/HomePage/images/Cakes/@item.Picture1" class="img-thumbnail"/>
+                                <div class="p-2">
+                                    @Html.DisplayFor(modelItem=>item.Name)
+                                    @Html.DisplayFor(modelItem=>item.Price)
+                                 </div>
+                            </div>
+
+                        </button>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+    </div>
+}
+    </tbody>
+    
+</table>*@
+<div class="u-body u-palette-2-light-2">
+<div class="container-fluid">
+    <div class="row display-flex">
+        @{
+            if (Model.Results != null)
+            {
+                foreach (var item in Model.Results)
+                {
+                            <div class="col-sm-4">
+                                <table class="table table-bordered" >
+
+                                    <tr style="text-align:center">
+                                        <td colspan="2" style="border-color:transparent;">
+                                            <a href="@Url.Action("Product","Home",new { id = item.Name })">
+                                            <img src="~/HomePage/images/Cakes/@item.Picture1" style="height: 270px;width: 330px;" /><br />
+                                            </a>
+                                            <span style="color:#337ab7">@item.Name</span><br />
+                                            <span style="color:indianred">@item.Price Ron</span><br />
+                                            
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                }
+            }
+        }
+
+
+
+    </div>
+</div>
+
+<paging page-no="@Model.CurrentPage"
+        page-size="@Model.PageSize"
+        total-records="@(Model.RowCount)">
+</paging>
+
+<br />
+<br />
+<br />
+@*
+@foreach (var item in Model.Results) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Picture1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Picture2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Picture3)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Name">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Name">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Name">Delete</a>
+            </td>
+        </tr>
+}*@
+
+@*    </tbody>
+</table>*@
+</div>

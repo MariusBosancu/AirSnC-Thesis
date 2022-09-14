@@ -1,0 +1,90 @@
+﻿@model AirSnC.Models.SignIn
+
+@{
+    ViewData["Title"] = "Forgot Password";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Forgot Password !">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Page 1</title>
+    <link rel="stylesheet" href="~/HomePage/nicepage.css" media="screen">
+    <link rel="stylesheet" href="~/HomePage/Log.css" media="screen">
+    <script class="u-script" type="text/javascript" src="~/HomePage/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="~/HomePage/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.2.6, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+
+
+
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Page 1">
+    <meta property="og:type" content="website">
+</head>
+<body class="u-body">
+    
+        <section class="u-clearfix u-palette-2-light-1 u-section-1" id="carousel_93c3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <div class="u-align-center u-container-style u-group u-shape-rectangle u-group-1">
+                    <div class="u-container-layout u-valign-middle u-container-layout-1">
+                        <h2 class="u-text u-text-body-alt-color u-text-default u-text-1">Sign Up !</h2>
+                        <div class="u-form u-login-control u-form-1">
+                            <form action="@Url.Action("Recoverpassword","SignIns")" method="post" class="u-clearfix u-form-custom-backend u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 0px;">
+                                
+                                <div class="u-form-group ">
+                                    <label for="email-a30d" class="u-label u-text-grey-5 u-label-2">Email *</label>
+                                    <input type="text" placeholder="Enter your Email" id="email-a30d" name="Email" class="u-border-2 u-border-grey-10 u-grey-10 u-input u-input-rectangle u-input-2" required="">
+                                </div>
+                                
+                                <div class="u-align-left u-form-group u-form-submit">
+                                    <a href="#" class="u-active-palette-2-light-2 u-border-none u-btn u-btn-submit u-button-style u-hover-palette-2-light-2 u-palette-4-base u-text-active-palette-2-base u-text-body-alt-color u-text-hover-palette-2-base u-btn-1">Sign Up</a>
+                                    <input type="submit" value="submit" class="u-form-control-hidden">
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="u-clearfix u-footer u-palette-2-light-1" id="sec-4ade">
+            <div class="u-clearfix u-sheet u-sheet-1">
+                <div class="u-align-left u-social-icons u-spacing-25 u-social-icons-1">
+                    <a class="u-social-url" target="_blank" data-type="Github" title="Github" href="">
+                        <span class="u-icon u-social-github u-social-icon u-icon-1">
+                            <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-e549"></use></svg>
+                            <svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-e549">
+                                <circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle>
+                                <path fill="#FFFFFF" d="M88,51.3c0-5.5-1.9-10.2-5.3-13.7c0.6-1.3,2.3-6.5-0.5-13.5c0,0-4.2-1.4-14,5.3c-4.1-1.1-8.4-1.7-12.7-1.8
+	c-4.3,0-8.7,0.6-12.7,1.8c-9.7-6.6-14-5.3-14-5.3c-2.8,7-1,12.2-0.5,13.5C25,41.2,23,45.7,23,51.3c0,19.6,11.9,23.9,23.3,25.2
+	c-1.5,1.3-2.8,3.5-3.2,6.8c-3,1.3-10.2,3.6-14.9-4.3c0,0-2.7-4.9-7.8-5.3c0,0-5-0.1-0.4,3.1c0,0,3.3,1.6,5.6,7.5c0,0,3,9.1,17.2,6
+	c0,4.3,0.1,8.3,0.1,9.5h25.2c0-1.7,0.1-7.2,0.1-14c0-4.7-1.7-7.9-3.4-9.4C76,75.2,88,70.9,88,51.3z"></path>
+                            </svg>
+                        </span>
+                    </a>
+                    <a class="u-social-url" target="_blank" data-type="Custom" title="Custom" href="">
+                        <span class="u-file-icon u-icon u-social-custom u-social-icon u-icon-2"><img src="images/5977575.png" alt=""></span>
+                    </a>
+                    <a class="u-social-url" target="_blank" data-type="Custom" title="Custom" href="">
+                        <span class="u-file-icon u-icon u-social-custom u-social-icon u-icon-3"><img src="images/104089.png" alt=""></span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    
+</body>
+</html>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
